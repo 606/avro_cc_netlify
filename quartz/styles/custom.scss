@@ -1,0 +1,280 @@
+@use "./base.scss";
+
+// Hide the Explorer title — folders themselves are the navigation
+button.title-button.desktop-explorer {
+  display: none !important;
+}
+
+// Explorer fills remaining sidebar height and scrolls
+.explorer {
+  flex: 1 1 0 !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+// Always show Explorer content (no collapse on root level) + scrollable, no scrollbars
+.explorer > .explorer-content {
+  display: block !important;
+  height: 100% !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  margin-top: 0 !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+}
+
+// Hide scrollbars on explorer-ul as well
+.explorer-content ul.explorer-ul {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+}
+
+// Top-level list: compact column
+.explorer-content > ul.explorer-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+// File links inside the explorer
+.explorer-content ul li > a {
+  line-height: 1.5;
+}
+
+// ── Folder entries (flat, single-level items) ──────────────────────────
+
+.explorer-folder-item .folder-entry {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-decoration: none;
+  color: var(--secondary);
+  font-family: var(--headerFont);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: var(--tertiary);
+  }
+}
+
+.folder-entry-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.folder-entry-chevron {
+  color: var(--gray);
+  margin-left: auto;
+  font-size: 1rem;
+  flex-shrink: 0;
+  opacity: 0.5;
+}
+
+// Note count badges
+.note-count {
+  font-size: 0.75rem;
+  color: var(--gray);
+  margin-left: 0.4rem;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+// ── Drilled header (breadcrumbs) ───────────────────────────────────────
+
+.explorer-drilled-header {
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.3rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
+  border-bottom: 1px solid var(--lightgray);
+}
+
+.drilled-back {
+  display: flex;
+  align-items: center;
+  color: var(--gray);
+  text-decoration: none;
+  transition: color 0.15s ease;
+  flex-shrink: 0;
+
+  &:hover {
+    color: var(--dark);
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.drilled-ellipsis-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.drilled-ellipsis {
+  all: unset;
+  color: var(--gray);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0 0.15rem;
+  border-radius: 3px;
+  transition: color 0.15s ease, background-color 0.15s ease;
+
+  &:hover {
+    color: var(--dark);
+    background-color: var(--lightgray);
+  }
+}
+
+// Dropdown of hidden ancestors — fixed to escape overflow clipping
+.drilled-dropdown {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  min-width: 160px;
+  max-width: 260px;
+  max-height: 300px;
+  overflow-y: auto;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0.25rem 0;
+  margin: 0;
+  list-style: none;
+
+  &.open {
+    display: block;
+    animation: dropdownFadeIn 0.15s ease-out;
+  }
+
+  li a {
+    display: block;
+    padding: 0.3rem 0.75rem;
+    color: var(--dark);
+    text-decoration: none;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color 0.1s ease;
+    opacity: 1;
+
+    &:hover {
+      background-color: var(--lightgray);
+      color: var(--tertiary);
+    }
+  }
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.drilled-sep {
+  color: var(--gray);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.drilled-crumb {
+  color: var(--gray);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: var(--dark);
+  }
+}
+
+.drilled-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+// ── Drill-in animation ────────────────────────────────────────────────
+
+@keyframes drillFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.explorer-ul.drilled > li:not(.explorer-drilled-header) {
+  animation: drillFadeIn 0.2s ease-out;
+}
+
+// Disable overflow gradient fade on explorer completely
+.explorer-ul.gradient-active {
+  mask-image: none !important;
+}
+
+// ── Related & Backlinks: no scrollbars, no gradient fade ──────────────
+.related-pages,
+.backlinks {
+  max-height: none !important;
+  overflow: visible !important;
+
+  & > ul.overflow {
+    max-height: none !important;
+    overflow: visible !important;
+
+    &.gradient-active {
+      mask-image: none !important;
+    }
+  }
+}
+
+// ── Folder pages: hide file listing (explorer sidebar handles navigation) ──
+.page-listing {
+  display: none !important;
+}
+
+// ── Sidebar resize handle ─────────────────────────────────────────────
+
+.sidebar-resize-handle {
+  position: fixed;
+  top: 0;
+  width: 6px;
+  height: 100vh;
+  cursor: col-resize;
+  z-index: 999;
+  background: transparent;
+  transition: background 0.15s;
+
+  &:hover,
+  &.dragging {
+    background: var(--lightgray);
+  }
+}
