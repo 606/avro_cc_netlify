@@ -1,0 +1,15 @@
+# Build output
+public/
+
+# Dependencies
+node_modules/
+
+# Quartz cache
+quartz/.quartz-cache/
+
+# OS files
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
