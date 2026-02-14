@@ -1,70 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
     <channel>
-      <title>KB Avro</title>
-      <link>https://kb.avro.cc</link>
-      <description>Last 10 notes on KB Avro</description>
+      <title>dev.avro.cc</title>
+      <link>https://dev.avro.cc</link>
+      <description>Last 10 notes on dev.avro.cc</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Web</title>
-    <link>https://kb.avro.cc/web/</link>
-    <guid>https://kb.avro.cc/web/</guid>
-    <description><![CDATA[ Web fundamentals: HTTP, REST, GraphQL, WebSockets. Protocols, standards, and API design principles. ]]></description>
-    <pubDate>Sat, 14 Feb 2026 16:59:47 GMT</pubDate>
+    <title>Operating Systems</title>
+    <link>https://dev.avro.cc/os/</link>
+    <guid>https://dev.avro.cc/os/</guid>
+    <description><![CDATA[ An operating system (OS) is system software that manages computer hardware and software resources, and provides common services for computer programs. ]]></description>
+    <pubDate>Sat, 14 Feb 2026 19:40:07 GMT</pubDate>
   </item><item>
-    <title>Testing</title>
-    <link>https://kb.avro.cc/testing/</link>
-    <guid>https://kb.avro.cc/testing/</guid>
-    <description><![CDATA[ Testing strategies from unit to integration to E2E. Includes TDD workflows, test containers, and property-based testing. ]]></description>
-    <pubDate>Sat, 14 Feb 2026 16:59:47 GMT</pubDate>
+    <title>MacOS</title>
+    <link>https://dev.avro.cc/os/macos/</link>
+    <guid>https://dev.avro.cc/os/macos/</guid>
+    <description><![CDATA[ macOS (previously OS X and originally Mac OS X) is a proprietary Unix-like[7][8] operating system, derived from OPENSTEP for Mach and FreeBSD, which has been marketed and developed by Apple since 2001. ]]></description>
+    <pubDate>Sat, 14 Feb 2026 19:40:07 GMT</pubDate>
   </item><item>
-    <title>Security</title>
-    <link>https://kb.avro.cc/security/</link>
-    <guid>https://kb.avro.cc/security/</guid>
-    <description><![CDATA[ Application security, OWASP Top 10, authentication patterns (OAuth, JWT), encryption, and secure coding practices. ]]></description>
-    <pubDate>Sat, 14 Feb 2026 16:59:47 GMT</pubDate>
+    <title>Clii</title>
+    <link>https://dev.avro.cc/cli/</link>
+    <guid>https://dev.avro.cc/cli/</guid>
+    <description><![CDATA[  const {VaultTree} = customJS; VaultTree.render(dv);. ]]></description>
+    <pubDate>Sat, 14 Feb 2026 19:40:07 GMT</pubDate>
   </item><item>
-    <title>Programming Languages</title>
-    <link>https://kb.avro.cc/plangs/</link>
-    <guid>https://kb.avro.cc/plangs/</guid>
-    <description><![CDATA[ Programming languages beyond C#: F#, Rust, Go, TypeScript. Paradigms, type systems, and polyglot thinking. ]]></description>
-    <pubDate>Sat, 14 Feb 2026 16:59:47 GMT</pubDate>
+    <title>index</title>
+    <link>https://dev.avro.cc/devops/</link>
+    <guid>https://dev.avro.cc/devops/</guid>
+    <description><![CDATA[  const {VaultTree} = customJS; VaultTree.render(dv);. ]]></description>
+    <pubDate>Sat, 14 Feb 2026 19:09:43 GMT</pubDate>
   </item><item>
-    <title>Performance</title>
-    <link>https://kb.avro.cc/performance/</link>
-    <guid>https://kb.avro.cc/performance/</guid>
-    <description><![CDATA[ Performance optimization: profiling, caching strategies, memory management, benchmarking with BenchmarkDotNet, and Span/Memory APIs. ]]></description>
-    <pubDate>Sat, 14 Feb 2026 16:59:47 GMT</pubDate>
+    <title>Home</title>
+    <link>https://dev.avro.cc/</link>
+    <guid>https://dev.avro.cc/</guid>
+    <description><![CDATA[ this is home. ]]></description>
+    <pubDate>Sat, 14 Feb 2026 19:09:43 GMT</pubDate>
   </item><item>
-    <title>Design Patterns</title>
-    <link>https://kb.avro.cc/patterns/</link>
-    <guid>https://kb.avro.cc/patterns/</guid>
-    <description><![CDATA[ Classic and modern design patterns: SOLID, CQRS, Event Sourcing, Repository, Mediator. When to apply and when to avoid. ]]></description>
-    <pubDate>Sat, 14 Feb 2026 16:59:47 GMT</pubDate>
+    <title>content-file</title>
+    <link>https://dev.avro.cc/content-file</link>
+    <guid>https://dev.avro.cc/content-file</guid>
+    <description><![CDATA[ content description. ]]></description>
+    <pubDate>Sat, 14 Feb 2026 18:41:21 GMT</pubDate>
   </item><item>
-    <title>Observability</title>
-    <link>https://kb.avro.cc/observability/</link>
-    <guid>https://kb.avro.cc/observability/</guid>
-    <description><![CDATA[ Logging, monitoring, and distributed tracing. Tools like OpenTelemetry, Grafana, Prometheus, and structured logging with Serilog. ]]></description>
-    <pubDate>Sat, 14 Feb 2026 16:59:47 GMT</pubDate>
-  </item><item>
-    <title>Messaging</title>
-    <link>https://kb.avro.cc/messaging/</link>
-    <guid>https://kb.avro.cc/messaging/</guid>
-    <description><![CDATA[ Message queues and event-driven architecture: RabbitMQ, Kafka, Azure Service Bus. Async communication between services. ]]></description>
-    <pubDate>Sat, 14 Feb 2026 16:59:47 GMT</pubDate>
-  </item><item>
-    <title>Linux</title>
-    <link>https://kb.avro.cc/linux/</link>
-    <guid>https://kb.avro.cc/linux/</guid>
-    <description><![CDATA[ Linux administration, shell scripting, CLI tools, and system internals. Essential knowledge for backend and DevOps work. ]]></description>
-    <pubDate>Sat, 14 Feb 2026 16:59:47 GMT</pubDate>
-  </item><item>
-    <title>Infrastructure</title>
-    <link>https://kb.avro.cc/infrastructure/</link>
-    <guid>https://kb.avro.cc/infrastructure/</guid>
-    <description><![CDATA[ Cloud platforms, containerization with Docker, CI/CD pipelines, and infrastructure as code. ]]></description>
-    <pubDate>Sat, 14 Feb 2026 16:59:47 GMT</pubDate>
+    <title>.Net</title>
+    <link>https://dev.avro.cc/dotnet/</link>
+    <guid>https://dev.avro.cc/dotnet/</guid>
+    <description><![CDATA[ The .Net platform (pronounced as “dot net”; formerly named .NET Core) is a free and open-source, managed computer software framework for Windows, Linux, and MacOS operating systems. ]]></description>
+    <pubDate>Sat, 14 Feb 2026 18:41:21 GMT</pubDate>
   </item>
     </channel>
   </rss>
