@@ -1,6 +1,6 @@
 ---
 up: "[[index home]]"
-title: c#
+title: C#
 aliases: C#
 publish: true
 ---
