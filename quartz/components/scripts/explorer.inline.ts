@@ -14,6 +14,7 @@ interface ParsedOptions {
 
 function countDescendants(node: FileTrieNode): number {
   if (!node.isFolder) return 1
+  if (node.children.length === 0) return node.data ? 1 : 0
   return node.children.reduce((sum, child) => sum + countDescendants(child), 0)
 }
 
@@ -104,7 +105,7 @@ function createFolderItem(currentSlug: FullSlug, node: FileTrieNode): HTMLLIElem
   nameSpan.textContent = node.displayName
   a.appendChild(nameSpan)
 
-  const count = countDescendants(node)
+  const count = node.children.reduce((sum, child) => sum + countDescendants(child), 0)
   const badge = document.createElement("span")
   badge.className = "note-count"
   badge.textContent = String(count)
