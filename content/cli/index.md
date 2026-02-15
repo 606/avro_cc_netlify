@@ -3,4 +3,4 @@ up:
 publish: true
 title: CLI
 ---
-A command-line interface [[cli/index|CLI]], sometimes called a command-line shell, is a means of interacting with software via commands – each formatted as a line of text. Command-line interfaces emerged in the mid-1960s, on computer terminals, as an interactive and more user-friendly alternative to the non-interactive mode available with punched cards.
+A command-line interface **CLI**, sometimes called a command-line shell, is a means of interacting with software via commands – each formatted as a line of text. Command-line interfaces emerged in the mid-1960s, on computer terminals, as an interactive and more user-friendly alternative to the non-interactive mode available with punched cards.

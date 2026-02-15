@@ -1,0 +1,21 @@
+---
+up: "[[index|Home]]"
+title: "File-Scoped Types"
+aliases: File-Scoped Types
+description:
+created: 2026-02-15
+modified: 2026-02-15
+publish: true
+enableToc: true
+draft: true
+obsolete: false
+---
+**File-Scoped Types** is
+
+## Key Concepts
+
+-
+
+## See Also
+
+-

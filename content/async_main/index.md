@@ -1,0 +1,21 @@
+---
+up: "[[index|Home]]"
+title: "Async Main"
+aliases: Async Main
+description:
+created: 2026-02-15
+modified: 2026-02-15
+publish: true
+enableToc: true
+draft: true
+obsolete: false
+---
+**Async Main** is
+
+## Key Concepts
+
+-
+
+## See Also
+
+-

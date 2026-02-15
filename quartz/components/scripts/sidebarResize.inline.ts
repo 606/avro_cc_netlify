@@ -26,7 +26,7 @@ document.addEventListener("nav", () => {
   if (saved) {
     const w = parseInt(saved, 10)
     if (w >= MIN_WIDTH && w <= MAX_WIDTH) {
-      quartzBody.style.gridTemplateColumns = `${w}px auto minmax(220px, 380px)`
+      quartzBody.style.gridTemplateColumns = `${w}px 1fr minmax(220px, 380px)`
     }
   }
 
@@ -59,7 +59,7 @@ document.addEventListener("nav", () => {
     let newWidth = e.clientX - pageRect.left
     newWidth = Math.max(MIN_WIDTH, Math.min(MAX_WIDTH, newWidth))
 
-    quartzBody.style.gridTemplateColumns = `${newWidth}px auto minmax(220px, 380px)`
+    quartzBody.style.gridTemplateColumns = `${newWidth}px 1fr minmax(220px, 380px)`
     localStorage.setItem(STORAGE_KEY, String(newWidth))
     positionHandle()
   }
@@ -91,7 +91,7 @@ document.addEventListener("nav", () => {
       handle.style.display = ""
       const saved = localStorage.getItem(STORAGE_KEY)
       if (saved && quartzBody) {
-        quartzBody.style.gridTemplateColumns = `${saved}px auto minmax(220px, 380px)`
+        quartzBody.style.gridTemplateColumns = `${saved}px 1fr minmax(220px, 380px)`
       }
       positionHandle()
     }

@@ -21,6 +21,7 @@ import DesktopOnly from "./DesktopOnly"
 import MobileOnly from "./MobileOnly"
 import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
+import DraftBanner from "./DraftBanner"
 import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
@@ -51,6 +52,7 @@ export {
   RecentNotes,
   NotFound,
   Breadcrumbs,
+  DraftBanner,
   Comments,
   Flex,
   ConditionalRender,

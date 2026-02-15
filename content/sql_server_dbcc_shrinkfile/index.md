@@ -1,0 +1,21 @@
+---
+up: "[[index|Home]]"
+title: "SQL Server DBCC SHRINKFILE"
+aliases: SQL Server DBCC SHRINKFILE
+description:
+created: 2026-02-15
+modified: 2026-02-15
+publish: true
+enableToc: true
+draft: true
+obsolete: false
+---
+**SQL Server DBCC SHRINKFILE** is
+
+## Key Concepts
+
+-
+
+## See Also
+
+-
